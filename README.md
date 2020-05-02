@@ -1,5 +1,5 @@
-# DesignLabProject
-Maven 
+# Team Maven : Credit Card Approval System
+Design Lab Project 
 # Use Case Diagram
 ![](uc.png)
 
