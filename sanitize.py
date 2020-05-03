@@ -10,8 +10,8 @@ class Sanitizer():
         self.ApplicationData = server_api.fetch_from(bnk_url)
     def performSanitization():
         df = getApplication()
-        SanitizedApplicationData = df[['reports','expenditure','active','income']]
-        return SanitizedApplicationData
+        ## must think of doing some checks here
+        return df
 
     def getApplication():
         return pd.read_csv(ApplicationData)
