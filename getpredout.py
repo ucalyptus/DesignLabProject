@@ -5,6 +5,8 @@ from future import division
 import sys
 sys.path.append('../')
 
+### data is a list of lists like data=[['tom', 10], ['nick', 15], ['juli', 14]]
+df = pd.DataFrame(data, columns = ['ApplicationId', 'Status']) 
 df.to_csv('prediction.csv')
 
 
