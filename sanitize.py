@@ -12,9 +12,8 @@ class Sanitizer():
         df = getApplication()
         ## must think of doing some checks here
         return df
-
     def getApplication():
-        return pd.read_csv(ApplicationData)
+        return pd.read_csv(self.ApplicationData)
 
 
 def getSanitizedApplicationData(obj):
