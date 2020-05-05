@@ -1,13 +1,12 @@
-from future import print_function
-from future import division
 import pandas as pd
-import ServerAPI as server_api
+#import ServerAPI as server_api
 import sys
 sys.path.append('../')
 
 class Sanitizer():
     def __init__(self,bnk_url):
-        self.ApplicationData = server_api.fetch_from(bnk_url)
+        pass
+     #   self.ApplicationData = server_api.fetch_from(bnk_url)
     def performSanitization():
         df = getApplication()
         ## must think of doing some checks here
