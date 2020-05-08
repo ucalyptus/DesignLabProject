@@ -16,6 +16,8 @@ class TestGetPredOut(unittest.TestCase):
   
   def Test_categorical(self):
     df = pd.read_csv('unapproved_prediction.csv')
+    assert('Yes' or 'No' in df.Status.values)
+    
     
     
     
