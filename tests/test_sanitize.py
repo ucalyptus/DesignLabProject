@@ -10,7 +10,7 @@ import sanitize
 class TestSanitize(unittest.TestCase):
   
   def Test_getapplication(self):
-    obje = sanitize.Sanitizer('https://raw.githubusercontent.com/ucalyptus/Double-Branch-Dual-Attention-Mechanism-Network/master/UP.csv')
+    obje = sanitize.Sanitizer('https://gist.githubusercontent.com/ucalyptus/fb8cb8605d38eea3653345340029660f/raw/583d28c165d822213278ca3da17e181ab41443b6/application.csv')
     df = obje.getApplication()
     assert_equal(df,pd.DataFrame)
   def Columns(self, path_to_csv):
