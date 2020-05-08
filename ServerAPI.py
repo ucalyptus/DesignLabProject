@@ -2,9 +2,9 @@ import ftplib
 
 def download():
     session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')
-    fil = open('application.csv','rb')
-    session.retrbinary('RETR application.csv',file)
-    fil.close()
+    handle = open('application.csv','wb')
+    session.retrbinary('RETR application.csv',handle.write)
+    handle.close()
     session.quit()
 def upload():
     
