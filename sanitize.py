@@ -2,14 +2,11 @@ import pandas as pd
 import sys
 sys.path.append('../')
 import ftplib
+import ServerAPI
 class Sanitizer():
-    def __init__(self,bnk_url):
-        session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')
-        fil = open('application.csv','rb')
-        session.retrbinary('RETR application.csv',file)
-        fil.close()
-        session.quit()
-     
+    def __init__(self):
+        ServerAPI.download()
+        
     def performSanitization():
         df = getApplication()
         
@@ -25,7 +22,7 @@ def getSanitizedApplicationData(obj):
 
 if  __init__ == "__main__":
 
-    callsan = Sanitizer(bnk_url)
+    callsan = Sanitizer()
     df=getSanitizedApplicationData(callsan)
     df.to_csv('SanitizedApplication.csv')
 
