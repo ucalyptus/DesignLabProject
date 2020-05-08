@@ -4,7 +4,7 @@ import pytest
 import pandas as pd
 import unittest
 import sys
-sys.path.insert(0,r'/home/ucalyptus/DesignLabProject/')
+import sklearn
 import pred
 import os
 
