@@ -1,11 +1,11 @@
 import pandas as pd
-#import ServerAPI as server_api
+import ServerAPI as server_api
 import sys
 sys.path.append('../')
 
 class Trainer ():
     def __init__(self,DownloadTrainingDataset) :
-        self.TrainingDataSet = DownloadTrainingDataset
+        self.TrainingDataSet = pd.read_csv(DownloadTrainingDataset)
        
     def callExtractor(ExtractData):
         return Extractor(ExtractData)
@@ -23,4 +23,6 @@ class Extractor():
 
 
 if __init__ == '__main__':
+    tt  = Trainer('dataset.csv')
+    tt
     
