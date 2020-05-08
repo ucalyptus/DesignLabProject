@@ -16,8 +16,9 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 - `chmod +x run.sh`
 - `sh run.sh`
 
-# Demo
-Rapid Prototype can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
+# Statistical Training Ground
+Preconfigured Notebook can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
+
 # Use Case Diagram
 ![](images/uc.png)
 
