@@ -15,6 +15,8 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 # Quick Run
 - `chmod +x run.sh`
 - `sh run.sh`
+# Tests
+- `python -m unittest filename` where filename is the python file to be tested.
 
 # Statistical Training Ground
 Preconfigured Notebook can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
