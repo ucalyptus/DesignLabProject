@@ -19,7 +19,7 @@ def setApprovalPrediction(df):
 feat_cols = ['reports','expenditure','age','income']
 df = pd.read_csv('unapproved_prediction.csv')
 setApprovalPrediction(df)
-session = ftplib.FTP('server.address.com','USERNAME','PASSWORD')  #awaiting ftp server help from team
+session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')  #awaiting ftp server help from team
 file = open('prediction.csv','rb')                  # file to send
 session.storbinary('STOR prediction.csv', file)     # send the file
 file.close()                                    # close file and FTP
