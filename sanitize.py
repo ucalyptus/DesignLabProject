@@ -5,9 +5,9 @@ import ftplib
 class Sanitizer():
     def __init__(self,bnk_url):
         session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')
-        file = open('application.csv','rb')
+        fil = open('application.csv','rb')
         session.retrbinary('RETR application.csv',file)
-        file.close()
+        fil.close()
         session.quit()
      
     def performSanitization():
