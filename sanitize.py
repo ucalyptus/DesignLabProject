@@ -1,15 +1,18 @@
 import pandas as pd
-#import ServerAPI as server_api
 import sys
 sys.path.append('../')
-
+import ftplib
 class Sanitizer():
     def __init__(self,bnk_url):
-        pass
-     #   self.ApplicationData = server_api.fetch_from(bnk_url)
+        session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')
+        file = open('application.csv','rb')
+        session.retrbinary('RETR application.csv',file)
+        file.close()
+        session.quit()
+     
     def performSanitization():
         df = getApplication()
-        ## must think of doing some checks here
+        
         return df
     def getApplication():
         return pd.read_csv(self.ApplicationData)
