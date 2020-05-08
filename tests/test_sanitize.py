@@ -3,8 +3,7 @@ import pandas.testing as pt
 import pytest
 import pandas as pd
 import unittest
-import sys
-sys.path.insert(0,r'/home/ucalyptus/DesignLabProject/')
+
 import sanitize
 
 
