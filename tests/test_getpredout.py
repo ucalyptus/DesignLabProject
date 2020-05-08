@@ -18,7 +18,7 @@ class TestGetPredOut(unittest.TestCase):
     df = pd.read_csv('unapproved_prediction.csv')
     assert('Yes' or 'No' in df.Status.values , "Only yes/no allowed")
     b = df.isnull().any().any()
-    assert_false(b,"Null Values invalid ")
+    self.assertFalse(b,"Null Values invalid ")
 
     
     
