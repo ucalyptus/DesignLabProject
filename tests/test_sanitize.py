@@ -3,18 +3,20 @@ import pandas.testing as pt
 import pytest
 import pandas as pd
 import unittest
-
+import ServerAPI
 import sanitize
 
 
 class TestSanitize(unittest.TestCase):
   
   def Test_getapplication(self):
-    obje = sanitize.Sanitizer('https://gist.githubusercontent.com/ucalyptus/fb8cb8605d38eea3653345340029660f/raw/583d28c165d822213278ca3da17e181ab41443b6/application.csv')
+    obje = sanitize.Sanitizer()
     df = obje.getApplication()
     assert_equal(df,pd.DataFrame)
-  def Columns(self, path_to_csv):
-    df = pd.read_csv(path_to_csv)
+    
+  def Test_columns(self):
+    obje = sanitize.Sanitizer()
+    df = obje.getApplication()
     columns = list(df.columns)
     try:
       df_req = df[['reports', 'expenditure', 'active', 'income', 'ApplicationId']]
