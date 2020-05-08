@@ -12,6 +12,10 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 - `conda activate mavenlab`
 - `pip install -r requirements.txt`
 
+# Quick Run
+- `chmod +x run.sh`
+- `sh run.sh`
+
 # Demo
 Rapid Prototype can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
 # Use Case Diagram
