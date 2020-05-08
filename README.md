@@ -8,9 +8,9 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 **III** - To ensure model robustness, model is refreshed every 5 days by developers working on Maven. They employ public/privatised data and a myriad of boosted trees and other advanced algorithms to make sure misclassification can be avoided as much as possible during inference phase. 
 
 # Usage
-`conda create -n mavenlab python=3.6`
-`conda activate mavenlab`
-`pip install -r requirements.txt`
+- `conda create -n mavenlab python=3.6`
+- `conda activate mavenlab`
+- `pip install -r requirements.txt`
 
 # Demo
 Rapid Prototype can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
