@@ -5,7 +5,9 @@ import pandas as pd
 import unittest
 import sys
 import sklearn
-import pred
+import sys
+sys.path.append('../')
+from src import pred
 import os
 
 class TestPrediction(unittest.TestCase):

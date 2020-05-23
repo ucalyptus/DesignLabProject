@@ -3,7 +3,9 @@ import pandas.testing as pt
 import pytest
 import pandas as pd
 import unittest
-import trainmodel
+import sys
+sys.path.append('../')
+from src import trainmodel
 import os
 
 class TestTrainModel(unittest.TestCase):

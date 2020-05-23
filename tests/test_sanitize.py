@@ -3,8 +3,9 @@ import pandas.testing as pt
 import pytest
 import pandas as pd
 import unittest
-import ServerAPI
-import sanitize
+import sys
+sys.path.append('../')
+from src import sanitize,ServerAPI
 
 
 class TestSanitize(unittest.TestCase):
