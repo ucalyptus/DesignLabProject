@@ -22,8 +22,8 @@ class TestGetPredOut(unittest.TestCase):
     b = df.isnull().any().any()
     self.assertFalse(b,"Null Values invalid ")
 
-    
-    
+if __name__ == '__main__':
+    unittest.main()
     
     
     
