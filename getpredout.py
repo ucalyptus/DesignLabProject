@@ -14,7 +14,7 @@ def setApprovalPrediction(df):
   df = df.drop(feat_cols,axis=1)
   df.to_csv('prediction.csv', index=False)
   
-feat_cols = ['reports','expenditure','age','income']
+feat_cols = ['reports','expenditure','active','income']
 df = pd.read_csv('unapproved_prediction.csv')
 setApprovalPrediction(df)
 import ServerAPI

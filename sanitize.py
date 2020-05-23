@@ -14,7 +14,7 @@ class Sanitizer():
 
     
     def performSanitization(self):
-        df = getApplication('application.csv')
+        df = self.getApplication('application.csv')
         return df
 
 def getSanitizedApplicationData(obj):

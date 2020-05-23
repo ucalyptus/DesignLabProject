@@ -10,6 +10,6 @@ def upload():
     
     session = ftplib.FTP('ftp.drivehq.com','MavenDev','Teammaven123')
     fil = open('prediction.csv','rb')
-    session.storbinary('STOR prediction.csv',file)
+    session.storbinary('STOR prediction.csv',fil)
     fil.close()
     session.quit()
