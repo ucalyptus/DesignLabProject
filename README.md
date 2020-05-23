@@ -10,12 +10,14 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 # Initial Setup
 - `conda create -n mavenlab python=3.6`
 - `conda activate mavenlab`
-- `pip install -r requirements.txt`
+- `sh setup.sh`
 
 # Quick Run
+- `cd src/`
 - `chmod +x run.sh`
 - `sh run.sh`
 # Tests
+- `cd tests/`
 - `chmod +x runtests.sh`
 - `sh runtests.sh`
 
