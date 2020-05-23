@@ -1,7 +1,5 @@
 import ftplib
 import pandas as pd
-from future import print_function
-from future import division
 import sys
 sys.path.append('../')
 

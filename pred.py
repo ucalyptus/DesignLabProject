@@ -1,5 +1,3 @@
-from future import print_function
-from future import division
 import pandas as pd
 import joblib
 import requests
@@ -30,7 +28,7 @@ class Predictor():
         return card
 
 
-if __init__ == '__main__':
+if __name__ == '__main__':
     url = 'https://raw.githubusercontent.com/ucalyptus/scikit-on-gRPC/master/model.joblib'
     r = requests.get(url, allow_redirects=True) #downloads the file
     open('model.joblib', 'wb').write(r.content) #saves it as so

@@ -7,20 +7,22 @@ class Sanitizer():
     def __init__(self):
         ServerAPI.download()
         
-    def performSanitization():
-        df = getApplication()
-        
-        return df
-    def getApplication():
+    
+    def getApplication(self,url):
+        self.ApplicationData = url
         return pd.read_csv(self.ApplicationData)
 
+    
+    def performSanitization(self):
+        df = getApplication('application.csv')
+        return df
 
 def getSanitizedApplicationData(obj):
     SanitizedApplicationData=obj.performSanitization()
     return SanitizedApplicationData
 
 
-if  __init__ == "__main__":
+if  __name__ == "__main__":
 
     callsan = Sanitizer()
     df=getSanitizedApplicationData(callsan)
