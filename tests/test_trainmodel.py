@@ -12,7 +12,7 @@ class TestTrainModel(unittest.TestCase):
   
   def test_traindb(self):
     df  = pd.read_csv('../src/dataset.csv')
-    assert_equal(df,pd.DataFrame, "Invalid")
+    self.assertEqual(type(df),pd.DataFrame, "Invalid")
     
     
     
