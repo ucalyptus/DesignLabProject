@@ -7,27 +7,23 @@ import sys
 sys.path.append('../')
 from src import sanitize,ServerAPI
 
-
+url = 'application.csv'
 class TestSanitize(unittest.TestCase):
   
   def test_getapplication(self):
     obje = sanitize.Sanitizer()
-    df = obje.getApplication()
-    assert_equal(df,pd.DataFrame,"Invalid Type")
+    df = obje.getApplication(url)
+    self.assertEqual(type(df),pd.DataFrame,"Invalid Type")
     
   def test_columns(self):
     obje = sanitize.Sanitizer()
-    df = obje.getApplication()
+    df = obje.getApplication(url)
     columns = list(df.columns)
     try:
-      df_req = df[['reports', 'expenditure', 'active', 'income', 'ApplicationId']]
+      df_req = df[['reports', 'expenditure', 'active', 'income']]
     except e:
       print("Invalid! All necessary columns not found :")
       print(e)
-    unique_ids = set(df['ApplicationId'])
-    assert len(df['ApplicationId']) == len(unique_ids) , "Invalid! All IDs are not unique"
-    assert sum(df.isnull().sum()) == 0, "Null values found"
-    
 
 
 if __name__ == '__main__':
