@@ -21,7 +21,7 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 # Tests
 - `cd tests/`
 - `chmod +x runtests.sh`
-- `sh runtests.sh`
+- `sh runtest.sh`
 
 # Statistical Training Ground
 Preconfigured Notebook can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
