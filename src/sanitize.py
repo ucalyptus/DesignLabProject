@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 sys.path.append('../')
 import ftplib
-from . import ServerAPI
+from src import ServerAPI
 class Sanitizer():
     def __init__(self):
         ServerAPI.download()

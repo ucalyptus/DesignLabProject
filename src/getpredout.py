@@ -2,6 +2,7 @@ import ftplib
 import pandas as pd
 import sys
 sys.path.append('../')
+from src import ServerAPI
 
 def check(element):
 	if element == '1':
@@ -17,7 +18,7 @@ def setApprovalPrediction(df):
 feat_cols = ['reports','expenditure','active','income']
 df = pd.read_csv('../src/unapproved_prediction.csv')
 setApprovalPrediction(df)
-from . import ServerAPI
+
 ServerAPI.upload()
 
 
