@@ -10,13 +10,13 @@ import os
 
 class TestGetPredOut(unittest.TestCase):
   
-  def Test_attribs(self):
+  def test_attribs(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
     assert 'ApplicationId' in df.columns , "Invalid! Application Id mandatory "
     assert 'Status' in df.columns , "Invalid! Status mandatory "
     
   
-  def Test_categorical(self):
+  def test_categorical(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
     assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
     b = df.isnull().any().any()

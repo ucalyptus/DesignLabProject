@@ -10,12 +10,12 @@ from src import sanitize,ServerAPI
 
 class TestSanitize(unittest.TestCase):
   
-  def Test_getapplication(self):
+  def test_getapplication(self):
     obje = sanitize.Sanitizer()
     df = obje.getApplication()
     assert_equal(df,pd.DataFrame,"Invalid Type")
     
-  def Test_columns(self):
+  def test_columns(self):
     obje = sanitize.Sanitizer()
     df = obje.getApplication()
     columns = list(df.columns)
@@ -30,3 +30,5 @@ class TestSanitize(unittest.TestCase):
     
 
 
+if __name__ == '__main__':
+  unittest.main()

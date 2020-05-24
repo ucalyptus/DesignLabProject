@@ -35,7 +35,7 @@ class Extractor():
 
 
 if __name__ == '__main__':
-    df  = pd.read_csv('dataset.csv')
+    df  = pd.read_csv('../src/dataset.csv')
     tt = Trainer(df)
     exc = tt.callExtractor()
     X,y = exc.FeatureExtraction(df)

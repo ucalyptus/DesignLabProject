@@ -10,10 +10,11 @@ import os
 
 class TestTrainModel(unittest.TestCase):
   
-  def Test_traindb(self):
-    df  = pd.read_csv('dataset.csv')
+  def test_traindb(self):
+    df  = pd.read_csv('../src/dataset.csv')
     assert_equal(df,pd.DataFrame, "Invalid")
     
     
     
-    
+if __name__ == "__main__":
+  unittest.main()
