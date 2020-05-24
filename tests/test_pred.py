@@ -19,7 +19,7 @@ class TestPrediction(unittest.TestCase):
   def test_features(self):
     url = 'https://raw.githubusercontent.com/ucalyptus/scikit-on-gRPC/master/model.joblib'
     r = requests.get(url, allow_redirects=True) #downloads the file
-    open('../src/model.joblib', 'wb').write(r.content) #saves it as so
+    open('../tests/model.joblib', 'wb').write(r.content) #saves it as so
     ob = pred.Predictor('../src/SanitizedApplication.csv','model.joblib')
     features = pd.Index(['reports','expenditure','active','income'],dtype='object')
     df = ob.getSanitizedApplicationData()
@@ -30,7 +30,7 @@ class TestPrediction(unittest.TestCase):
   def test_modelclass(self):
     url = 'https://raw.githubusercontent.com/ucalyptus/scikit-on-gRPC/master/model.joblib'
     r = requests.get(url, allow_redirects=True) #downloads the file
-    open('../src/model.joblib', 'wb').write(r.content) #saves it as so
+    open('../tests/model.joblib', 'wb').write(r.content) #saves it as so
     ob = pred.Predictor('../src/SanitizedApplication.csv','../src/model.joblib')
     Model = ob.model_load()
     assert(type(Model) == sklearn.ensemble._forest.RandomForestClassifier)
