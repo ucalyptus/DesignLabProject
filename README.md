@@ -11,6 +11,7 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 # Initial Setup
 - `conda create -n mavenlab python=3.6`
 - `conda activate mavenlab`
+### If you are running the setup on an online environment like gitpod.io or repl.it , you don't need to do the above steps.
 - `sh setup.sh`
 
 # Quick Run
