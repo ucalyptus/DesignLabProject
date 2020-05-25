@@ -23,8 +23,8 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 - `chmod +x runtests.sh`
 - `sh runtest.sh`
 
-# Statistical Training Ground
-Preconfigured Notebook can be played [here.](https://colab.research.google.com/drive/1bk8envVjTJP6UuSj83m3EVf3DWUkr-xt)
+# Model Creation
+Preconfigured Notebook can be viewed [here.](Maven System.ipynb - Colaboratory.pdf)
 
 # Use Case Diagram
 ![](images/uc.png)
