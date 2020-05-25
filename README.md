@@ -24,7 +24,7 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 - `sh runtest.sh`
 
 # Model Creation
-Preconfigured Notebook can be viewed [here.](Maven System.ipynb - Colaboratory.pdf)
+Preconfigured Notebook can be viewed [here.](https://github.com/ucalyptus/DesignLabProject/blob/master/Maven%20System.ipynb%20-%20Colaboratory.pdf)
 
 # Use Case Diagram
 ![](images/uc.png)
