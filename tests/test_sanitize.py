@@ -34,6 +34,9 @@ class TestSanitize(unittest.TestCase):
   def test_validAgeRange(self):
     obje = sanitize.Sanitizer()
     df = obje.getApplication(url)
+    booleam = df["age"].between(20, 65, inclusive = True).all()
+    self.assertTrue(boolean, "invalid age")
+    
     
   
     
