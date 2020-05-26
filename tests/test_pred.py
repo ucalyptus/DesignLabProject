@@ -40,7 +40,13 @@ class TestPrediction(unittest.TestCase):
     assert(type(Model) == sklearn.ensemble._forest.RandomForestClassifier)
     
   def test_expectedOutput(self):
-    url = 
+    df = pd.read_csv('../src/unapproved_prediction.csv')
+    dframe = pd.read_csv('../test/ExpectedPrediction.csv')
+    boolean = df.equals(dframe)
+    self.assertTrue(boolean, "Wrong Prediction")
+    
+  def test_salary(self):
+    
     
     
     
