@@ -21,6 +21,9 @@ class TestGetPredOut(unittest.TestCase):
     assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
     b = df.isnull().any().any()
     self.assertFalse(b,"Null Values invalid ")
+    
+  def test_checkExtension(self):
+    
 
 if __name__ == '__main__':
     unittest.main()
