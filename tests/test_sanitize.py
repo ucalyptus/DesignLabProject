@@ -31,6 +31,12 @@ class TestSanitize(unittest.TestCase):
     boolean = not df["Student"].is_unique 
     self.assertFalse(boolean, "Application ID not unique")
     
+  def test_validAgeRange(self):
+    obje = sanitize.Sanitizer()
+    df = obje.getApplication(url)
+    
+  
+    
   
     
 
