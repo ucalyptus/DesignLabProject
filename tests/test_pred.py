@@ -39,6 +39,10 @@ class TestPrediction(unittest.TestCase):
     Model = ob.model_load()
     assert(type(Model) == sklearn.ensemble._forest.RandomForestClassifier)
     
+  def test_expectedOutput(self):
+    url = 
+    
+    
     
     
 
