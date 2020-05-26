@@ -24,6 +24,12 @@ class TestSanitize(unittest.TestCase):
     except e:
       print("Invalid! All necessary columns not found :")
       print(e)
+      
+  def test_uniqueapplicationID(self):
+    obje = sanitize.Sanitizer()
+    df = obje.getApplication(url)
+    boolean = not df["Student"].is_unique 
+    
 
 
 if __name__ == '__main__':
