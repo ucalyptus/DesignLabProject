@@ -29,6 +29,9 @@ class TestSanitize(unittest.TestCase):
     obje = sanitize.Sanitizer()
     df = obje.getApplication(url)
     boolean = not df["Student"].is_unique 
+    self.assertFalse(boolean, "Application ID not unique")
+    
+  
     
 
 
