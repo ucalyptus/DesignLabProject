@@ -41,7 +41,7 @@ class TestPrediction(unittest.TestCase):
     
   def test_expectedOutput(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
-    dframe = pd.read_csv('../test/ExpectedPrediction.csv')
+    dframe = pd.read_csv('../tests/ExpectedPrediction.csv')
     boolean = df.equals(dframe)
     self.assertTrue(boolean, "Wrong Prediction")
     
