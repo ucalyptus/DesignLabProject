@@ -10,7 +10,7 @@ def check(element):
 		 return 'No'
 
 def setApprovalPrediction(df):
-  df = df.drop(feat_cols,axis=1)
+  #df = df.drop(feat_cols,axis=1)
   df['Status'] = df['Status'].apply(check)
   df.to_csv('prediction.csv', index=False)
   return df 
