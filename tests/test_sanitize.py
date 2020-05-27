@@ -24,6 +24,31 @@ class TestSanitize(unittest.TestCase):
     except e:
       print("Invalid! All necessary columns not found :")
       print(e)
+      
+  def test_uniqueapplicationID(self):
+    obje = sanitize.Sanitizer()
+    df = obje.getApplication(url)
+    boolean = not df["ApplicationId"].is_unique 
+    self.assertFalse(boolean, "Application ID not unique")
+    
+  #def test_validAgeRange(self):
+    #obje = sanitize.Sanitizer()
+    #df = obje.getApplication(url)
+    #booleam = df["age"].between(20, 65, inclusive = True).all()
+    #self.assertTrue(boolean, "invalid age")
+    
+  def test_nullValues(self):
+    obje = sanitize.Sanitizer()
+    df = obje.getApplication(url)
+    boolean = df.isnull().any().any()
+    self.assertFalse(boolean, "Invalid! Null values not allowed")
+    
+    
+    
+  
+    
+  
+    
 
 
 if __name__ == '__main__':

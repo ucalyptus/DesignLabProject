@@ -39,6 +39,19 @@ class TestPrediction(unittest.TestCase):
     Model = ob.model_load()
     assert(type(Model) == sklearn.ensemble._forest.RandomForestClassifier)
     
+  def test_expectedOutput(self):
+    df = pd.read_csv('../src/unapproved_prediction.csv')
+    dframe = pd.read_csv('../tests/ExpectedPrediction.csv')
+    boolean = df.equals(dframe)
+    self.assertTrue(boolean, "Wrong Prediction")
+    
+  def test_salary(self):
+    df = pd.read_csv('../src/SanitizedApplication.csv')
+    boolean = (df['income'] > 1.5).all()
+    self.assertTrue(boolean, "Invalid Salary")
+ 
+    
+    
     
     
 

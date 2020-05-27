@@ -15,6 +15,8 @@ class Sanitizer():
     
     def performSanitization(self):
         df = self.getApplication('application.csv')
+        col_list = ["reports", "income", "active", "expenditure"]
+        df = pd.read_csv("application.csv", usecols=col_list)
         return df
 
 def getSanitizedApplicationData(obj):
