@@ -47,7 +47,7 @@ class TestPrediction(unittest.TestCase):
     
   def test_salary(self):
     df = pd.read_csv('../src/SanitizedApplication.csv')
-    boolean = (df['income'] > 1.5).all()
+    boolean = (df['income'] >= 1.5).all()
     self.assertTrue(boolean, "Invalid Salary")
  
     
