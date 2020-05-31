@@ -40,10 +40,20 @@ class TestPrediction(unittest.TestCase):
     assert(type(Model) == sklearn.ensemble._forest.RandomForestClassifier)
     
   def test_expectedOutput(self):
-    df = pd.read_csv('../src/unapproved_prediction.csv')
-    dframe = pd.read_csv('../tests/ExpectedPrediction.csv')
-    boolean = df.equals(dframe)
+    df1 = pd.read_csv('../src/unapproved_prediction.csv')
+    df2 = pd.read_csv('../tests/ExpectedPrediction.csv')
+    df=df1.merge(df2,how='outer',indicator=True).loc[lambda x:x['_merge']=='right_only']
+    dfr=df.count()
+    dfr=list(dfr)
+    correct_pred= 250 - dfr[1]
+    acc=correct_pred/250
+    if(acc>=0.8):
+        boolean=True
+    else:
+        boolean=False
+    #boolean = df.equals(dframe)
     self.assertTrue(boolean, "Wrong Prediction")
+    
     #Boolean_Check
     #import pandas as pd
     #import numpy as np
@@ -62,17 +72,6 @@ class TestPrediction(unittest.TestCase):
     #print(r)
     #print(r1)
     
-    #Specific_Check
-    #df=df1.merge(df2,how='outer',indicator=True).loc[lambda x:x['_merge']=='right_only']
-    #dfr=df.count()
-    #dfr=list(dfr)
-    #correct_pred= 250 - dfr[1]
-    #acc=correct_pred/250
-    #if(acc>=0.8):
-        #boolean=True
-    #else:
-        #boolean=False
-    #print(boolean)
     
   def test_salary(self):
     df = pd.read_csv('../src/SanitizedApplication.csv')
