@@ -30,7 +30,7 @@ class TestPrediction(unittest.TestCase):
   def test_modelclass(self):
     ob = pred.Predictor('../src/SanitizedApplication.csv','../src/model.joblib')
     Model = ob.model_load()
-    self.assertEqual(type(Model), sklearn.tree._classes.DecisionTreeClassifier)
+    self.assertEqual(type(Model), sklearn.ensemble._forest.RandomForestClassifier)
     
   def test_expectedOutput(self):
     df1 = pd.read_csv('../src/unapproved_prediction.csv')
