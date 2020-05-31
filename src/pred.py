@@ -30,10 +30,11 @@ class Predictor():
 
 
 if __name__ == '__main__':
-"""
+    """
     url = 'https://github.com/ucalyptus/DesignLabProject/blob/Muskan/src/model.joblib?raw=true'
     r = requests.get(url, allow_redirects=True) #downloads the file
-    open('model.joblib', 'wb').write(r.content) #saves it as so"""
+    open('model.joblib', 'wb').write(r.content) #saves it as so
+    """
     pred = Predictor('SanitizedApplication.csv','model.joblib')
     features = ['reports','expenditure','active','income']
     df = pred.getSanitizedApplicationData()
