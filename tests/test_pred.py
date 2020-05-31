@@ -64,10 +64,15 @@ class TestPrediction(unittest.TestCase):
     
     #Specific_Check
     #df=df1.merge(df2,how='outer',indicator=True).loc[lambda x:x['_merge']=='right_only']
-    #print(df)
-    
-    #Comparison check
-    #df1['Status'].isin(df2['Status']).value_counts()
+    #dfr=df.count()
+    #dfr=list(dfr)
+    #correct_pred= 250 - dfr[1]
+    #acc=correct_pred/250
+    #if(acc>=0.8):
+        #boolean=True
+    #else:
+        #boolean=False
+    #print(boolean)
     
   def test_salary(self):
     df = pd.read_csv('../src/SanitizedApplication.csv')
