@@ -66,6 +66,9 @@ class TestPrediction(unittest.TestCase):
     #df=df1.merge(df2,how='outer',indicator=True).loc[lambda x:x['_merge']=='right_only']
     #print(df)
     
+    #Comparison check
+    #df1['Status'].isin(df2['Status']).value_counts()
+    
   def test_salary(self):
     df = pd.read_csv('../src/SanitizedApplication.csv')
     boolean = (df['income'] >= 1.2).all()
