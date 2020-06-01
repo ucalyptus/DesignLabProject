@@ -24,9 +24,10 @@ class TestPrediction(unittest.TestCase):
                 f.close()"""
     ob = pred.Predictor('../src/SanitizedApplication.csv','../src/model.joblib')
     features = pd.Index(['reports','expenditure','active','income'],dtype='object')
-    df = ob.getSanitizedApplicationData()
-    exc = ob.callExtractor(features)
-    df = exc.FeatureExtraction(df)
+    #df = ob.getSanitizedApplicationData()
+    #exc = ob.callExtractor(features)
+    #df = exc.FeatureExtraction(df)
+    df = pd.read_csv('../tests/prediction_attributes_1.csv')
     self.assertEqual(type(features),type(df.columns))
     
   def test_modelclass(self):
