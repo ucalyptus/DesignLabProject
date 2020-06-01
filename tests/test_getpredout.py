@@ -12,13 +12,25 @@ class TestGetPredOut(unittest.TestCase):
   
   def test_attribs(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
-    assert 'ApplicationId' in df.columns , "Invalid! Application Id mandatory "
-    assert 'Status' in df.columns , "Invalid! Status mandatory "
+    if('ApplicationId' in df.columns and 'Status' in df.columns):
+      boolean = True
+    self.assertTrue(boolean, 'Necessary attribute(s) missing')
+    
     
   
   def test_categorical(self):
-    df = pd.read_csv('../src/unapproved_prediction.csv')
-    assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
+    df = pd.read_csv('../src/prediction.csv')
+    #assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
+    boolean = True
+    #if (not(1 in df.Status) or not(0 in df.Status)):
+    if not(df['Status'].str.contains('Yes').any() or df['Status'].str.contains('No').any()):
+      boolean = False
+      
+  
+      
+
+    self.assertTrue(boolean, "only yes/no permitted")
+      
     b = df.isnull().any().any()
     self.assertFalse(b,"Null Values invalid ")
     
@@ -26,7 +38,4 @@ class TestGetPredOut(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
-    
-    
-    
+  
