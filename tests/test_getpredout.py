@@ -12,8 +12,10 @@ class TestGetPredOut(unittest.TestCase):
   
   def test_attribs(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
-    assert 'ApplicationId' in df.columns , "Invalid! Application Id mandatory "
-    assert 'Status' in df.columns , "Invalid! Status mandatory "
+    if('ApplicationId' in df.columns and 'Status' in df.columns):
+      boolean = true
+    self.assertTrue(boolean, 'Necessary attribute(s) missing')
+    
     
   
   def test_categorical(self):
