@@ -20,7 +20,13 @@ class TestGetPredOut(unittest.TestCase):
   
   def test_categorical(self):
     df = pd.read_csv('../src/unapproved_prediction.csv')
-    assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
+    #assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
+    for status in df['Status']:
+      if ((status != 'Yes') or (status =! 'No')):
+        boolean = False
+        break
+    self.assertTrue(boolean, "only yes/no permitted")
+      
     b = df.isnull().any().any()
     self.assertFalse(b,"Null Values invalid ")
     
