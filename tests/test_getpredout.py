@@ -25,6 +25,9 @@ class TestGetPredOut(unittest.TestCase):
       if ((status != 'Yes') or (status =! 'No')):
         boolean = False
         break
+      else:
+        boolean = True
+      
     self.assertTrue(boolean, "only yes/no permitted")
       
     b = df.isnull().any().any()
