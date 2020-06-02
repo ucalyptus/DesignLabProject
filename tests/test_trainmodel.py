@@ -14,5 +14,7 @@ class TestTrainModel(unittest.TestCase):
     df  = pd.read_csv('../src/dataset.csv')
     self.assertEqual(type(df),pd.DataFrame, "Invalid")
     
+    
+    
 if __name__ == "__main__":
   unittest.main()
