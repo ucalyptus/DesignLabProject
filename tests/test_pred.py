@@ -15,12 +15,12 @@ tracemalloc.start()
 class TestPrediction(unittest.TestCase):
   
   def test_features(self):
-    """url = 'https://raw.githubusercontent.com/ucalyptus/scikit-on-gRPC/master/model.joblib'
-                r = requests.get(url, allow_redirects=True) #downloads the file
-                f=open('../tests/model.joblib', 'wb')
-                f.write(r.content) #saves it as so
-                f.close()"""
-    ob = pred.Predictor('../src/SanitizedApplication.csv','../src/model.joblib')
+    url = 'https://raw.githubusercontent.com/ucalyptus/scikit-on-gRPC/master/model.joblib'
+    r = requests.get(url, allow_redirects=True) #downloads the file
+    f=open('../tests/model.joblib', 'wb')
+    f.write(r.content) #saves it as so
+    f.close()
+    ob = pred.Predictor('../src/SanitizedApplication.csv','model.joblib')
     features = pd.Index(['reports','expenditure','active','income'],dtype='object')
     df = ob.getSanitizedApplicationData()
     exc = ob.callExtractor(features)
@@ -33,6 +33,7 @@ class TestPrediction(unittest.TestCase):
     self.assertEqual(type(Model), sklearn.ensemble._forest.RandomForestClassifier)
     
   def test_expectedOutput(self):
+
     df1 = pd.read_csv('../src/unapproved_prediction.csv')
     df2 = pd.read_csv('../tests/ExpectedPrediction.csv')
     df=df1.merge(df2,how='outer',indicator=True).loc[lambda x:x['_merge']=='right_only']
@@ -50,7 +51,7 @@ class TestPrediction(unittest.TestCase):
     
   def test_salary(self):
     df = pd.read_csv('../src/SanitizedApplication.csv')
-    boolean = (df['income'] >= 1.2).all()
+    boolean = (df['income'] > 1.5).all()
     self.assertTrue(boolean, "Invalid Salary")
 
 

@@ -20,7 +20,7 @@ class TestSanitize(unittest.TestCase):
     df = obje.getApplication(url)
     columns = list(df.columns)
     try:
-      df_req = df[['ApplicationId', 'reports', 'expenditure', 'active', 'income']]
+      df_req = df[['reports', 'expenditure', 'active', 'income']]
     except e:
       print("Invalid! All necessary columns not found :")
       print(e)
