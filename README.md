@@ -14,14 +14,15 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 ### If you are running the setup on an online environment like gitpod.io or repl.it , you don't need to do the above steps.
 - `sh setup.sh`
 
-# Quick Run
+# Run Inference on Unseen Bank Data
 - `cd src/`
-- `chmod +x run.sh`
-- `sh run.sh`
+- `sh inference.sh`
 # Tests
 - `cd tests/`
-- `chmod +x runtests.sh`
-- `sh runtest.sh`
+- `sh runtests.sh`
+# Train your own model file
+- `cd src/`
+- 'sh train.sh'
 
 # Model Creation
 Preconfigured Notebook can be viewed [here.](https://github.com/ucalyptus/DesignLabProject/blob/master/Maven%20System.ipynb%20-%20Colaboratory.pdf)
