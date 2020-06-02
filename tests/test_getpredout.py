@@ -27,9 +27,9 @@ class TestGetPredOut(unittest.TestCase):
    # length = len(df.index)
     #c = countyes.count() + countno.count()
     #if(c < length).any():
-     # boolean = False
-    #else:
-     # boolean = True
+      boolean = False
+    else:
+      boolean = True
     
       
   
