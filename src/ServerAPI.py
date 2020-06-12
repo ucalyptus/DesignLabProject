@@ -9,6 +9,7 @@ def download():
     session.retrbinary('RETR application.csv',handle.write)
     handle.close()
     session.quit()
+    print('Downloaded Successfully')
 
 def upload():
     session = ftplib.FTP(host,user,passwd)
@@ -16,3 +17,4 @@ def upload():
     session.storbinary('STOR prediction.csv',handle)
     handle.close()
     session.quit()
+    print('Uploaded Successfully')
