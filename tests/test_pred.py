@@ -27,6 +27,7 @@ class TestPrediction(unittest.TestCase):
     df = ob.getSanitizedApplicationData()
     exc = ob.callExtractor(features)
     df = exc.FeatureExtraction(df)
+    #df = pd.read_csv('../tests/prediction_attributes_1.csv')
     self.assertEqual(type(features),type(df.columns))
     
   def test_modelclass(self):

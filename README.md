@@ -1,6 +1,13 @@
 [![Run on Repl.it](https://repl.it/badge/github/ucalyptus/DesignLabProject)](https://repl.it/github/ucalyptus/DesignLabProject)
 # Team Maven : Credit Card Approval System
 Design Lab Project 
+# Team
+- Muskan - Project Manager
+- Sayantan Das - Lead Developer
+- Sheetal Kumari - QA Manager
+- Soujannya Roy - QA Engineer
+- Md Salman - Developer
+- Debankan Ganguly - Developer
 # Problem Statement
 Small businesses must seek credit approval to obtain funds from lenders, investors, and vendors, and also grant credit approval to their customers. Banking industries receive so many applications for credit card request. Going through each request manually can be very time consuming, also prone to human errors. 
 # Solution Statement
