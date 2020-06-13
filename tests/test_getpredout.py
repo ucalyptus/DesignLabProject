@@ -18,15 +18,16 @@ class TestGetPredOut(unittest.TestCase):
     
   
   def test_categorical(self):
-    df = pd.read_csv('../tests/categorical_values.csv')
-    assert 'Yes' or 'No' in df.Status.values , "Only yes/no allowed" 
-    if (not(df['Status'].str.contains('Yes')).any() or not(df['Status'].str.contains('No')).any()):
+    df = pd.read_csv('../src/prediction.csv')
+    countyes = df[df['Status'].str.contains('Yes')]
+    countno = df[df['Status'].str.contains('No')]
+    length = len(df.index)
+    c = countyes.count() + countno.count()
+    if(c < length).any():
       boolean = False
     else:
-      boolean = True
-    
+      boolean = True 
     self.assertTrue(boolean, "only yes/no permitted")
-
   def test_checkNull(self):
     df = pd.read_csv('../src/prediction.csv')
 
