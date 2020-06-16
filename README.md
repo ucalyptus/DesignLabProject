@@ -1,5 +1,5 @@
 [![Run on Repl.it](https://repl.it/badge/github/ucalyptus/DesignLabProject)](https://repl.it/github/ucalyptus/DesignLabProject)
-![](images/MavenLogo.png)
+[](images/MavenLogo.png)
 # Team Maven : Credit Card Approval System
 Design Lab Project . Watch the **technical demo** [here](https://youtu.be/8bPrCyUI_rU)
 # Team
@@ -17,7 +17,9 @@ Small businesses must seek credit approval to obtain funds from lenders, investo
 - **III** : To ensure model robustness, model is refreshed every 5 days by developers working on Maven. They employ public/privatised data and a myriad of boosted trees and other advanced algorithms to make sure misclassification can be avoided as much as possible during inference phase. 
 
 # Initial Setup
-- `sh setup.sh` <br>
+
+`sh setup.sh` <br>
+
 If you are running on Anaconda follow these instructions,
 ```
 conda create -n mavenlab python=3.6
