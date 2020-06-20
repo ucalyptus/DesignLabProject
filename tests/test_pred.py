@@ -2,8 +2,7 @@
 
 """
 
-@Author: Sayantan Das
-@Github: ucalyptus
+@Author: Sayantan Das,Muskan
 
 """
 
