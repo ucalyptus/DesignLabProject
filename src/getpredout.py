@@ -1,3 +1,11 @@
+# coding: utf-8
+
+"""
+
+@Author: Sayantan Das
+@Github: ucalyptus
+
+"""
 import pandas as pd
 import sys
 sys.path.append('../')
