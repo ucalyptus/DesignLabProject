@@ -2,6 +2,8 @@
 [](images/MavenLogo.png)
 # Team Maven : Credit Card Approval System
 Design Lab Project . Watch the **technical demo** [here](https://youtu.be/8bPrCyUI_rU)
+# Deployment 
+Deployed using Github Actions. Check this [build for example](https://github.com/ucalyptus/DesignLabProject/actions/runs/165519995)
 # Team
 - Muskan - Project Manager
 - Sayantan Das - Lead Developer
