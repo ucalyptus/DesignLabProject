@@ -30,9 +30,11 @@ jobs:
       env:
         SIMONW_TOKEN: ${{ secrets.UCALYPTUS_TOKEN }}
       run: |-
-        sh src/run.sh
+        cd src/
+        sh run.sh
     - name: Run tests
       env:
         SIMONW_TOKEN: ${{ secrets.UCALYPTUS_TOKEN }}
       run: |-
-        sh tests/runtest.sh        
+        cd tests/
+        sh runtest.sh        
