@@ -1,4 +1,3 @@
-[![Run on Repl.it](https://repl.it/badge/github/ucalyptus/DesignLabProject)](https://repl.it/github/ucalyptus/DesignLabProject)
 [](images/MavenLogo.png)
 # Team Maven : Credit Card Approval System
 Design Lab Project . Watch the **technical demo** [here](https://youtu.be/8bPrCyUI_rU)
