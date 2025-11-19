@@ -45,7 +45,7 @@ class TestProcessApplications(unittest.TestCase):
     def test_sanitize_data(self):
         process_applications.sanitize_data('application.csv', 'SanitizedApplication.csv')
         sanitized_df = pd.read_csv('SanitizedApplication.csv')
-        self.assertEqual(list(sanitized_df.columns), ['reports', 'income', 'active', 'expenditure', 'age'])
+        self.assertEqual(list(sanitized_df.columns), ['reports', 'income', 'expenditure', 'age'])
 
     def test_make_predictions(self):
         process_applications.sanitize_data('application.csv', 'SanitizedApplication.csv')
