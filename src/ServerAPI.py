@@ -1,29 +1,31 @@
-# coding: utf-8
 
-"""
-
-@Author: Sayantan Das
-@Github: ucalyptus
-
-"""
 import ftplib
-from secrets import FTPID,FTPPWD
-
-username = FTPID
-password = FTPPWD
+from . import config
 
 def download():
-    session = ftplib.FTP('ftp.drivehq.com',username,password)
-    handle = open('application.csv','wb')
-    session.retrbinary('RETR application.csv',handle.write)
-    handle.close()
-    session.quit()
-    print('Downloaded Successfully')
+    session = None
+    try:
+        session = ftplib.FTP(config.FTP_HOST, config.FTP_USER, config.FTP_PASS)
+        if config.APPLICATION_DATA_FILE in session.nlst():
+            with open(config.APPLICATION_DATA_FILE, 'wb') as handle:
+                session.retrbinary(f'RETR {config.APPLICATION_DATA_FILE}', handle.write)
+            print('Downloaded Successfully')
+        else:
+            print(f'{config.APPLICATION_DATA_FILE} not found on the server.')
+    finally:
+        if session:
+            session.quit()
 
 def upload():
-    session = ftplib.FTP('ftp.drivehq.com',username,password)
-    fil = open('prediction.csv','rb')
-    session.storbinary('STOR prediction.csv',fil)
-    fil.close()
-    session.quit()
-    print('Uploaded Successfully')
+    session = None
+    try:
+        session = ftplib.FTP(config.FTP_HOST, config.FTP_USER, config.FTP_PASS)
+        if config.PREDICTIONS_FILE not in session.nlst():
+            with open(config.PREDICTIONS_FILE, 'rb') as fil:
+                session.storbinary(f'STOR {config.PREDICTIONS_FILE}', fil)
+            print('Uploaded Successfully')
+        else:
+            print(f'{config.PREDICTIONS_FILE} already exists on the server.')
+    finally:
+        if session:
+            session.quit()

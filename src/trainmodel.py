@@ -1,3 +1,4 @@
+
 # coding: utf-8
 
 """
@@ -44,11 +45,9 @@ class Extractor():
 
 
 if __name__ == '__main__':
-    df  = pd.read_csv('../src/dataset.csv')
+    df  = pd.read_csv('dataset.csv')
     tt = Trainer(df)
     exc = tt.callExtractor()
     X,y = exc.FeatureExtraction(df)
     clf = tt.train_gini_decision_fit(X,y)
-    dump(clf, 'model.joblib') 
-    
-    
+    dump(clf, 'model.joblib')
