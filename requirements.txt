@@ -1,6 +1,6 @@
 numpy
 pandas
-scikit-learn==0.22.2.post1
+scikit-learn
 joblib
 pytest
 requests
